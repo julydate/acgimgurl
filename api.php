@@ -76,7 +76,7 @@ switch ($returnType) {
 		$imgurls = [];
 		foreach ($randKeys as $key) {
 			$sina_img = str_re($giturlData[$key]);
-			$imgurls[] = $ssl . '://tva' . $server . '.sinaimg.cn/' . $size . '/' . $sina_img;
+			$imgurls[] = $ssl . 'tva' . $server . '.sinaimg.cn/' . $size . '/' . $sina_img;
 		}
 		$json['imgurls'] = $imgurls;
 		header('Content-type:text/json');
