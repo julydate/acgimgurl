@@ -59,7 +59,8 @@ $returnType = $_GET['return'];
 switch ($returnType) {
 		// 浏览器直接输出图片
 	case 'img':
-		$img = file_get_contents($imgurl, true);
+		$infoUrl = $ssl === '//' ? 'https:' . $imgurl : $imgurl;
+		$img = file_get_contents($infoUrl, true);
 		header("Content-Type:image/jpeg;");
 		echo $img;
 		break;
